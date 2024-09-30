@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="xx">hello </h1>
+    <button id="cl">Stop Transformation</button>
+    <script>
+        let xx=document.getElementById("xx");
+        let btn=document.getElementById("cl");
+        let val=setTimeout(() => {
+            xx.style.color="red";
+            xx.style.fontFamily="arial";
+            xx.style.backgroundColor="yellow";
+        }, 2500);
+
+        btn.addEventListener("click",()=>{
+               clearTimeout(val);
+        })
+    </script>
+</body>
+</html>
